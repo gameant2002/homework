@@ -1,0 +1,22 @@
+RewriteEngine on
+
+# web
+RewriteRule	^/?index$			index.html
+RewriteRule	^/?drugCategory$		drugCategory.html
+RewriteRule	^/?newVideo$			newYoutube.html
+RewriteRule	^/?treatmentCenter$		treatmentCenter.html
+RewriteRule	^/?favorites$			favorites.html
+RewriteRule	^/?drugCategory/marijuanaPage$	marijuanaPage.html
+RewriteRule	^/?youtubePage$			youtubePage.html
+
+RewriteRule	^/?register$			registerPage.html
+RewriteRule	^/?login$			loginPage.html
+RewriteRule	^/?modify$			modifyPage.html
+RewriteRule	^/?delete$			deletePage.html
+
+RewriteRule	^/?favorites_edit$			favorites.php
+RewriteRule	^/?favorites_show$			modify_favorites.php
+RewriteRule	^/?message$			message.php
+RewriteRule	^/?account_edit$			account.php
+
+
