@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Mobile Web App</title>
+	<link href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/app.js"></script>
+	<script src="js/storage.js"></script>
+</head>
+
+<body>
+	<div data-role="page" id="marijuanaPage">
+	
+		<div data-role="header" data-position="fixed">
+			<a data-rel="back" data-icon="back">Back</a>
+			<h1>Drug -  Marijuana</h1>
+			<div class="ui-btn-right">
+				<a onclick="modifyAccountMenu('loginGurst_drugCategory','loginUser_drugCategory')" href="#popupBasic_drugCategory" data-role="button" data-icon="user" data-iconpos="notext" data-rel="popup" data-transition="flow">View</a>
+				<a id="favoriteSubmit" href="#menu_page" data-role="button" data-icon="star" data-iconpos="notext" data-rel="dialog">setFavorite</a>
+			</div>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index" data-icon="home" data-transition="flow">Home</a></li>
+					<li><a href="drugCategory" data-icon="grid" data-transition="flow">Drug</a></li>
+					<li><a href="newVideo" data-icon="calendar" data-transition="flow">Video</a></li>
+					<li><a href="treatmentCenter" data-icon="navigation" data-transition="flow">Treatment</a></li>
+					<li><a href="favorites" data-icon="star" data-transition="flow">Favorites</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--Popup Account Menu-->
+		<div data-role="popup" id="popupBasic_drugCategory" data-position-to="window" data-overlay-theme="b" >
+			<div data-role="header">
+				<h1>Menu</h1>
+			</div>
+			<div id="loginGurst_drugCategory" data-role="content">
+				<ul data-role="listview">
+					<li><a href="register">Register Account</a></li>
+					<li><a href="login">Login Account</a></li>
+				</ul>
+			</div>
+			<div id="loginUser_drugCategory" data-role="content">
+				<ul data-role="listview">
+					<li><a href="modify">Modify Account Data</a></li>
+					<li><a href="delete">Delete Account</a></li>
+					<li><a onclick="ClearAll()" href="index">Logout Account</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div data-role="content" style="text-align: center;">
+			<img src="/img/marijuana.jpg" height="300" width="300"></img>
+		</div>
+
+			<div class="ui-grid-b">
+				<div class="ui-block-a" style="width:10%"></div>
+				<div class="ui-block-b" style="width:80%"><p>text</p></div>
+				<div class="ui-block-c" style="width:10%"></div>
+				<div class="ui-block-a" style="width:10%"></div>
+				<div class="ui-block-b" style="width:80%">
+					<div id="messageArea">
+						<!--<table border="1" bgcolor="#dddddd" style="width:100%">
+							<tr>
+								<th style="width:10%" height="10">NO.+this['id']+</th>
+								<th style="width:90%" >Published on : +this['date']+</th>
+							</tr>
+							<tr>
+								<td id="message_user" valign="top" height="100"> Username:</br>+this['username']+</td>
+								<td id="message_txt" valign="top" bgcolor="#ffffff">+this['messageTxt']+</td>
+							</tr>
+						</table>;-->
+					</div>
+				</div>
+				<div class="ui-block-c" style="width:10%"></div>
+			</div>
+			<div id="userTextarea_marijuana">
+			<div class="ui-grid-b">
+				<div class="ui-block-a" style="width:10%"></div>
+				<div class="ui-block-b" style="width:80%"><label for="marijuana_textarea"><h1>Reply message:</h1></label></div>
+				<div class="ui-block-c" style="width:10%"></div>
+				<div class="ui-block-a" style="width:10%"></div>
+				<div class="ui-block-b" style="width:80%"><textarea name="textarea" id="marijuana_textarea"></textarea></div>
+				<div class="ui-block-c" style="width:10%"></div>
+				<div class="ui-block-a" style="width:10%"></div>
+				<div class="ui-block-b" style="width:80%">
+					<div class="ui-grid-b">
+						<div class="ui-block-a"></div>
+						<div class="ui-block-b"></div>
+						<div class="ui-block-c"><a id="replySubmit" class="ui-btn">Reply</a></div>
+					</div>
+				</div>
+				<div class="ui-block-c" style="width:10%"></div>
+			</div>
+			</div>
+			<div id="gurstTextarea_marijuana">
+			<div class="ui-grid-b">
+				<div class="ui-block-a" style="width:10%"></div>
+				<div class="ui-block-b" style="width:80%"><h1>Please login and leave a message.</h1></div>
+				<div class="ui-block-c" style="width:10%"></div>
+			</div>
+			</div>
+			<script>
+				modifyAccountMenu('gurstTextarea_marijuana','userTextarea_marijuana');
+			</script>
+		<div data-role="footer">
+			<h4>No Drug World</h4>
+		</div>
+	</div>
+
+</body>
+</html>

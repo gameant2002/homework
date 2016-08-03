@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Mobile Web App</title>
+	<link href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/app.js"></script>
+	<script src="js/storage.js"></script>
+	<script src="js/youtubeAPI.js"></script>
+</head>
+
+<body>
+	<div data-role="page" id="news">
+	
+		<div data-role="header" data-position="fixed">
+			<a data-rel="back" data-icon="back">Back</a>
+			<h1>Drug Video</h1>
+			<div class="ui-btn-right">
+				<!--<a href="#menu_page" data-role="button" data-icon="search" data-iconpos="notext">Search</a>-->
+				<a onclick="modifyAccountMenu('loginGurst_news','loginUser_news')" href="#popupBasic_news" data-role="button" data-icon="user" data-iconpos="notext" data-rel="popup" data-transition="flow">View</a>
+				<a id="favoriteSubmit" href="#menu_page" data-role="button" data-icon="star" data-iconpos="notext" data-rel="dialog">setFavorite</a>
+			</div>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index" data-icon="home" data-transition="flow">Home</a></li>
+					<li><a href="drugCategory" data-icon="grid" data-transition="flow">Drug</a></li>
+					<li><a href="newVideo" data-icon="calendar" data-transition="flow">Video</a></li>
+					<li><a href="treatmentCenter" data-icon="navigation" data-transition="flow">Treatment</a></li>
+					<li><a href="favorites" data-icon="star" data-transition="flow">Favorites</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--Popup Account Menu-->
+		<div data-role="popup" id="popupBasic_news" data-position-to="window" data-overlay-theme="b" >
+			<div data-role="header">
+				<h1>Menu</h1>
+			</div>
+			<div id="loginGurst_news" data-role="content">
+				<ul data-role="listview">
+					<li><a href="register">Register Account</a></li>
+					<li><a href="login">Login Account</a></li>
+				</ul>
+			</div>
+			<div id="loginUser_news" data-role="content">
+				<ul data-role="listview">
+					<li><a href="modify">Modify Account Data</a></li>
+					<li><a href="delete">Delete Account</a></li>
+					<li><a onclick="ClearAll()" href="index">Logout Account</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div data-role="content">
+        	<h1>New Youtube video</h1>
+            <ul data-role="listview" data-inset="true">
+                <li data-role="list-divider">2014年5月26日</li>   
+                <li><a href="youtubePage.html" data-ajax="false">
+						<h2>香港戒毒會同輩輔導毒海重生的故事 </h2>
+						<p>香港戒毒會廖漢輝(一仔)同工在本年「萬眾同心公益金」活動分享在本會成功戒毒後，透過香港公益金資助的同輩輔導計劃，毒海重生的故事。</p>
+					</a>
+                </li>
+            </ul>
+		</div>
+		
+		<div data-role="footer">
+			<h4>No Drug World</h4>
+		</div>
+	</div>
+</body>
+</html>
